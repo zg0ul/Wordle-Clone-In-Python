@@ -12,10 +12,13 @@ Every day, a five-letter word is chosen at random wich players aim to guess with
   <figcaption> A Pop-up in the clone the explains how to play the game </figcaption>
 </figure>
   
+### Why PyQt5?
 
+PyQt5 is a Python binding of the popular GUI (Graphical User Interface) toolkit, Qt. It allows developers to create desktop applications that can run on different operating systems, such as Windows, macOS, and Linux. PyQt5 provides a wide range of features and widgets for building interactive and professional-looking applications.
 
+In addition, PyQt5 includes a designer called "QT Designer" that enables developers to create beautiful GUIs that can be programmed to perform various tasks.
 
-
+PyQt5 has a wide range of uses. It can be used to develop games, desktop applications, educational apps, and scientific computing and data visualization using Python libraries such as NumPy, Pandas, and Matplotlib, which are important for data science. The main purpose of the **Wordle Clone** was to practice PyQt5 and gain more familiarity with its capabilities.
 
 
 
