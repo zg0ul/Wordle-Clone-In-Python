@@ -1,0 +1,5 @@
+Number_of_games_played: 54
+Number_of_wins: 31
+Current_streak: 6
+Max_streak: 20
+Win_Percentage: 55

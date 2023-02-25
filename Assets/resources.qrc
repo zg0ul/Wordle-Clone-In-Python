@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="backspace">
+    <file>backspace White.png</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>Icons/Wordle-Clone-Logo.png</file>
+  </qresource>
+  <qresource prefix="Scores">
+    <file>podium_white.png</file>
+  </qresource>
+  <qresource prefix="How">
+    <file>question-mark.png</file>
+  </qresource>
+</RCC>
