@@ -46,9 +46,17 @@ For example, if the user enters the letter "W", both of these functions will che
 
 In the <code>WButtonClicked()</code> function, we first check whether there is space to insert a letter. If there is, the letter associated with the function is set for the current box to be filled, and that letter is added to a temporary string used to compare with the randomly chosen word to see if any of the letters are present in the target word. If so, we check if any of the letters are in the correct place and display that information on the game screen when the "Enter" button is pressed. This involves changing the colors of the boxes to indicate whether the letter is in the word or not. All of this is happening in the <code>BaseGame()</code> function in the <code>**main.py**</code> file.
 
-Now, the game works well when the player is allowed to play once per day, otherwise they can figure out the word then keep exiting and entering the game each time increasing the score which is cheating, to take care of that, <code>**played_cheker.py**</code> file, which contains 3 functions, <code>check_if_played_today()</code>: checks if there is a file with the current day's date as a name in the ***logs*** folder, it is called in the init method of the MainWindow Class in the main.py file, if the player already played today and tries to open the game, the statistics pop up window appears with no way to exit it, all the user can do is look at how many games they played, how many won, etc.
-<code>add_record()</code>: used in the <code>BaseGame()</code> when the player wins or loses the function add a record of today's date in the ***logs*** folder.
-<code>clear_logs()</code>: used in the MainWindow loop to clear the logs leaving the last two, to prevent storage run out.
+The game is designed to be played once per day, to prevent cheating where the player can exit and re-enter the game to increase their score. To achieve this, the <code>**played_checker.py**</code> file contains three functions:
+- <code>check_if_played_today()</code>: This function checks if a file with the current day's date exists in the logs folder. It is called in the *__init__* method of the **MainWindow** class in the <code>**main.py**</code> file. If the player has already played the game that day and tries to open it again, the statistics pop-up window will appear, with no option to exit. The user can only view their game stats.
+- <code>add_record()</code>: This function is used in the <code>BaseGame()</code> function, and records the current date in the ***logs*** folder when the player wins or loses.
+- <code>clear_logs()</code>: This function is used in the **MainWindow** loop to clear the logs, leaving only the last two. This prevents storage from running out.
+
+Since the scores and stats were just mentioned let's talk about them, the <code>**scores.py**</code> handles just that, which has different functions:
+- <code>create_file()</code>: Called in the *__init__* method of the main class to ensure that a text file called ***scores.txt*** exists, and if not, it creates it with the necessary contents, such as the number of games played, the number of wins, the current streak, the maximum streak, and the win percentage.
+- <code>read_scores()</code>: Takes the file name as input (which is ***scores.txt***) and is called in the *__init__* method of the **MainWindow** class. It reads the values from the text file and assigns them to the global dictionary ***settings.Scores_dict***
+- <code>update_scores()</code>: takes a boolean input whether the player won or lost (called in the <code>BaseGame()</code> function), then updates the values of ***settings.Scores_dict***.
+- <code>write_scores()</code>: Called after the <code>update_scores()</code> function, takes the file name and updated scores as inputs, and then updates the text file to contain the new values.
+By doing this, the app can store the user's stats and not lose them after the game is closed.
 
 ### Referances
 [^1]: https://en.wikipedia.org/wiki/Wordle
