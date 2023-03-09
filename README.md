@@ -58,5 +58,18 @@ Since the scores and stats were just mentioned let's talk about them, the <code>
 - <code>write_scores()</code>: Called after the <code>update_scores()</code> function, takes the file name and updated scores as inputs, and then updates the text file to contain the new values.
 By doing this, the app can store the user's stats and not lose them after the game is closed.
 
+---
+
+### Instructions for Installing Fonts
+
+If you experience any display issues or the fonts don't appear correctly when running the game, it might be due to missing fonts on your machine. To resolve this issue, please follow the steps below:
+
+- Navigate to the <code>Fonts</code> folder in the game directory.
+- Locate the font files with the extension `.ttf` or `.otf`.
+- Install the missing fonts on your machine by double-clicking on each font file and clicking the "Install" button.
+
+After following these steps, you should be able to run the game without any issues related to missing fonts.
+
+
 ### Referances
 [^1]: https://en.wikipedia.org/wiki/Wordle
